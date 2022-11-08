@@ -1,0 +1,79 @@
+#ELIF
+def adunare() :
+    print("a = ", end="")
+    a = int(input())
+    print("b = ", end="")
+    b = int(input())
+    print("a + b =", a + b)
+
+
+def scadere() :
+    print("a =", end="")
+    a = int(input())
+    print("b =", end="")
+    b = int(input())
+    print("a - b =", a - b)
+
+
+def inmultire() :
+    print("a = ", end="")
+    a = int(input())
+    print("b = ", end="")
+    b = int(input())
+    print("a * b =", a * b)
+
+
+def impartire() :
+    print("a =", end="")
+    a = int(input())
+    print("b =", end="")
+    b = int(input())
+    print("a / b =", a / b)
+
+
+def meniu() :
+    print('apasati 1 pentru adunare, 2 pentru scadere, 3 pentru inmultire, 4 pentru impartire')
+    opt = input().strip()  # elimina spatiile de la inceput sau sfarsit(daca exista)
+    if opt == '1' :
+        print('adunare')
+        adunare()
+    elif opt == '2' :
+        print('scadere')
+        scadere()
+    elif opt == '3' :
+        print('inmultire')
+        inmultire()
+    elif opt == '4' :
+        print('impartire')
+        impartire()
+    else :
+        print('optiunile disponibile sunt 3, 1, 4, 2')
+
+
+if __name__ == '__main__' :
+   while True:  #repeat
+    meniu()     #
+    
+    
+ else if
+ 
+ def meniu() :
+    print('apasati 1 pentru adunare, 2 pentru scadere, 3 pentru inmultire, 4 pentru impartire')
+    opt = input().strip()  # elimina spatiile de la inceput sau sfarsit(daca exista)
+    if opt == '1' :
+        print('adunare')
+        adunare()
+    else :
+        if opt == '2' :
+            print('scadere')
+            scadere()
+        else :
+            if opt == '3' :
+                print('inmultire')
+                inmultire()
+            else :
+                if opt == '4' :
+                    print('impartire')
+                    impartire()
+                else :
+                    print('optiunile disponibile sunt 3, 1, 4, 2')
