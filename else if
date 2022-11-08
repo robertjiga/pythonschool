@@ -1,4 +1,4 @@
-#ELIF
+# ELIF
 def adunare() :
     print("a = ", end="")
     a = int(input())
@@ -8,9 +8,9 @@ def adunare() :
 
 
 def scadere() :
-    print("a =", end="")
+    print("a = ", end="")
     a = int(input())
-    print("b =", end="")
+    print("b = ", end="")
     b = int(input())
     print("a - b =", a - b)
 
@@ -24,15 +24,16 @@ def inmultire() :
 
 
 def impartire() :
-    print("a =", end="")
+    print("a = ", end="")
     a = int(input())
-    print("b =", end="")
+    print("b = ", end="")
     b = int(input())
     print("a / b =", a / b)
 
 
 def meniu() :
-    print('apasati 1 pentru adunare, 2 pentru scadere, 3 pentru inmultire, 4 pentru impartire')
+    print(
+        'apasati 1 pentru adunare, 2 pentru scadere, 3 pentru inmultire, 4 pentru impartire, 5 pentru salarii, 6 pentru sir, 7 pentru alt sir, 8 pentru fibonacci')
     opt = input().strip()  # elimina spatiile de la inceput sau sfarsit(daca exista)
     if opt == '1' :
         print('adunare')
@@ -46,13 +47,72 @@ def meniu() :
     elif opt == '4' :
         print('impartire')
         impartire()
+    elif opt == '5' :
+        print('salarii')
+        salarii()
+    elif opt == '6' :
+        print('sir')
+        catide5()
+    elif opt == '7' :
+        lista5()
+    elif opt == '8':
+        fibonacci()
     else :
-        print('optiunile disponibile sunt 3, 1, 4, 2')
+        print('optiunile disponibile sunt 1, 2, 3, 4, 5, 6, 7, 8')
+
+
+def salarii() :
+    print('Introduceti salariul in lei: ')
+    s_ = int(input())
+    if s_ < 4000 :
+        print('Salariul este unul mic')
+    else :
+        if s_ < 8000 :
+            print('Salariul este unul mediu :')
+        else :
+            print('Salariul este unul mare :)')
+
+
+def catide5() :
+    print('Introduceti sirul de numere naturale')
+    sir = input()
+    contor = 0
+    for index in range(0, len(sir), 1) :  # 0 = inceput(val default), len(sir) = sfarsit, 1 = pasi(val default)
+        if sir[index] == '5' :
+            contor += 1
+    print('Nr de aparitii a cifrei 5 este: ', contor)
+    print('suma 5ilor este', 5 * contor)
+
+
+def lista5() :
+    print('Introduceti sirul de numere naturale despartite prin virgula')
+    l = input().split(', ')
+    contor = 0
+    for index in range(len(l)) :  # 0 = inceput(val default), len(sir) = sfarsit, 1 = pasi(val default)
+        if l[index].strip() == '5' :
+            contor += 1
+    print('Nr de aparitii a cifrei 5 este: ', contor)
+
+
+def fibonacci() :
+    f1 = 0
+    f2 = 1
+    contor = 0
+    while contor < 10 :
+        f3 = f1 + f2
+        f1 = f2
+        f2 = f3
+        contor +=1
+    print(f3)
 
 
 if __name__ == '__main__' :
-   while True:  #repeat
-    meniu()     #
+    exit_ = ""
+    while exit_ != "0" :
+        meniu()
+        print("pentru iesire tastati 0, sau orice alta tasta pentru continuare")
+        exit_ = input().strip()
+
     
     
  else if
