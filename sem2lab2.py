@@ -45,3 +45,11 @@ def suma_rec(lista):
 
 if __name__ == '__main__':
     suma_rec
+
+    
+def recursiv(start):
+    if start == 0:
+        print(0)
+    else:
+        print(start)
+        recursiv(start-1)
